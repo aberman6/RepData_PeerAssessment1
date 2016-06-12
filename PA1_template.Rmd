@@ -1,15 +1,17 @@
 ---
-title: "Reproducible Research: Peer Assessment 1"
+title: "Reproducible Research - Assignment 1"
 author: "Anna Berman"
 date: "June 12, 2016"
 output: html_document
 ---
+
 ```{r global_options, include=FALSE}
-knitr::opts_chunk$set(fig.width=12, fig.height=8, fig.path='Figs/', echo=TRUE, warning=FALSE, message=FALSE)
+knitr::opts_chunk$set(fig.width=6, fig.height=4, fig.path='Figs/',
+                      echo=TRUE, warning=FALSE, message=FALSE)
 ```
 
 ##Loading and preprocessing the data
-Download the data. 
+Download the database. 
 
 ```{r}
 #download dataset
@@ -125,3 +127,4 @@ plot(y = dailyact_weekend, x = names(dailyact_weekend), type = "l",
      xlab =  "5-Minute Interval",  main = "Daily Activity Pattern on Weekends", 
      ylab = "Average number of steps",  ylim =c(0, 250))
 ```
+
