@@ -7,11 +7,6 @@ June 12, 2016
 
 
 ```r
-library(knitr)
-```
-
-
-```r
 #download dataset
 fileUrl <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
 file <- "./activityData.zip"
@@ -43,7 +38,7 @@ dailySteps <- tapply(activity_rm$steps, activity_rm$date, sum)
 hist(dailySteps, main = "Total Number Of Daily Steps", xlab = "Daily Steps")
 ```
 
-![](Figs/unnamed-chunk-3-1.png)
+![](Figs/unnamed-chunk-2-1.png)
 
 
 Calculating the mean and median of the total number of steps taken per day
@@ -66,7 +61,7 @@ plot(y = dailyact, x = names(dailyact), type = "l", xlab = "5-Minute-Interval",
     main = "Daily Activity Pattern", ylab = "Average number of steps")
 ```
 
-![](Figs/unnamed-chunk-5-1.png)
+![](Figs/unnamed-chunk-4-1.png)
 
 ```r
 #calculate max interval
@@ -105,7 +100,7 @@ dailySteps_full <- tapply(activity_full$steps, activity_full$date, sum)
 hist(dailySteps_full, main = "Total Number Of Daily Steps (with imputed NAs)", xlab = "Daily Steps")
 ```
 
-![](Figs/unnamed-chunk-7-1.png)
+![](Figs/unnamed-chunk-6-1.png)
 
 ```r
 mean_full <- mean(dailySteps_full)
@@ -123,7 +118,7 @@ hist(dailySteps_full, main = "Total Number Of Daily Steps (with imputed NAs)",
      xlab = "Daily Steps")
 ```
 
-![](Figs/unnamed-chunk-8-1.png)
+![](Figs/unnamed-chunk-7-1.png)
 
 ##Are there differences in activity patterns between weekdays and weekends?
 
@@ -152,5 +147,5 @@ plot(y = dailyact_weekend, x = names(dailyact_weekend), type = "l",
      ylab = "Average number of steps",  ylim =c(0, 250))
 ```
 
-![](Figs/unnamed-chunk-9-1.png)
+![](Figs/unnamed-chunk-8-1.png)
 
