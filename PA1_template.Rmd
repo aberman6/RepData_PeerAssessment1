@@ -2,16 +2,16 @@
 title: "Reproducible Research - Assignment 1"
 author: "Anna Berman"
 date: "June 12, 2016"
-output: html_document
+output: 
+  html_document: 
+    keep_md: yes
 ---
 
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(fig.width=6, fig.height=4, fig.path='Figs/',
-                      echo=TRUE, warning=FALSE, message=FALSE)
+                      echo=TRUE, warning=FALSE, message=FALSE, dev = 'png')
 ```
 
-##Loading and preprocessing the data
-Download the database. 
 
 ```{r}
 #download dataset
